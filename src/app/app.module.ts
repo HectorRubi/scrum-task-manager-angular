@@ -9,6 +9,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { NavComponent } from './components/nav/nav.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
+import { TasksContainerComponent } from './components/tasks-container/tasks-container.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
     NotFoundComponent,
     LayoutComponent,
     NavComponent,
-    TaskItemComponent
+    TaskItemComponent,
+    TasksContainerComponent
   ],
   imports: [
     BrowserModule,
