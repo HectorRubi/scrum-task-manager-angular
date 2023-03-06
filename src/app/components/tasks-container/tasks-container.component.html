@@ -1,1 +1,4 @@
-<p>tasks-container works!</p>
+<div class="bg-slate-300 rounded-xl min-w-[250px] h-full py-2 px-1">
+  <p class="text-center">{{ title | titlecase }}</p>
+  <app-task-item *ngFor="let task of taskList"></app-task-item>
+</div>
