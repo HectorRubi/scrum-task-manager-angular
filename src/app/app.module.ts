@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { TaskViewComponent } from './pages/task-view/task-view.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LayoutComponent } from './components/layout/layout.component';
     HomeComponent,
     TaskViewComponent,
     NotFoundComponent,
-    LayoutComponent
+    LayoutComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
