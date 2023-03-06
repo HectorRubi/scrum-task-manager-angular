@@ -13,9 +13,9 @@ export class TasksContainerComponent implements OnInit {
   taskList: Task[] = [];
 
   ngOnInit() {
-    this.taskList.push(new Task());
-    this.taskList.push(new Task());
-    this.taskList.push(new Task());
-    this.taskList.push(new Task());
+    this.taskList.push(new Task('Task 1', 'Lorem ipsum dolor sit amet'));
+    this.taskList.push(new Task('Task 2', 'Lorem ipsum dolor sit amet'));
+    this.taskList.push(new Task('Task 3', 'Lorem ipsum dolor sit amet'));
+    this.taskList.push(new Task('Task 4', 'Lorem ipsum dolor sit amet'));
   }
 }
