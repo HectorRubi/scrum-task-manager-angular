@@ -10,6 +10,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { NavComponent } from './components/nav/nav.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
 import { TasksContainerComponent } from './components/tasks-container/tasks-container.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TasksContainerComponent } from './components/tasks-container/tasks-cont
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
