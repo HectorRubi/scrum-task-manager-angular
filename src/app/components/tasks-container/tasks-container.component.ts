@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { CdkDragDrop } from '@angular/cdk/drag-drop';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { Task } from 'src/app/models/task.model';
 import { TaskStatus } from 'src/app/utils/tasks';
@@ -8,14 +9,13 @@ import { TaskStatus } from 'src/app/utils/tasks';
   templateUrl: './tasks-container.component.html',
   styleUrls: ['./tasks-container.component.css']
 })
-export class TasksContainerComponent implements OnInit {
+export class TasksContainerComponent {
   @Input() title: TaskStatus = 'ready';
-  taskList: Task[] = [];
+  @Input() taskList: Task[] = [];
 
-  ngOnInit() {
-    this.taskList.push(new Task('Task 1', 'Lorem ipsum dolor sit amet'));
-    this.taskList.push(new Task('Task 2', 'Lorem ipsum dolor sit amet'));
-    this.taskList.push(new Task('Task 3', 'Lorem ipsum dolor sit amet'));
-    this.taskList.push(new Task('Task 4', 'Lorem ipsum dolor sit amet'));
+  @Output() drop = new EventEmitter<CdkDragDrop<Task[]>>();
+
+  onDrop(event: CdkDragDrop<Task[]>) {
+    this.drop.emit(event);
   }
 }

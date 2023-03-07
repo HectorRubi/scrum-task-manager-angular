@@ -1,4 +1,12 @@
-<div class="bg-slate-300 rounded-xl min-w-[250px] h-full py-2 px-1">
-  <p class="text-center">{{ title | titlecase }}</p>
-  <app-task-item *ngFor="let task of taskList" [task]="task"></app-task-item>
+<p class="text-center">{{ title | titlecase }}</p>
+<div
+  cdkDropList
+  [cdkDropListData]="taskList"
+  (cdkDropListDropped)="onDrop($event)"
+  class="bg-slate-300 rounded-xl min-w-[250px] h-full py-2 px-1"
+>
+  <app-task-item
+    *ngFor="let task of taskList"
+    [task]="task"
+  ></app-task-item>
 </div>

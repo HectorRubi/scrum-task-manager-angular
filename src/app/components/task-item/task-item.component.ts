@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { Task } from 'src/app/models/task.model';
 
@@ -8,5 +8,5 @@ import { Task } from 'src/app/models/task.model';
   styleUrls: ['./task-item.component.css']
 })
 export class TaskItemComponent {
-  @Input() task: Task = new Task();
+  @Input() task: Task = new Task('task-0');
 }

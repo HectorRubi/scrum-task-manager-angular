@@ -1,14 +1,25 @@
-<div class="flex gap-5 justify-between overflow-x-scroll h-[700px] px-5 py-5">
+<div class="flex justify-between w-full p-5" cdkDropListGroup>
   <app-tasks-container
     title="ready"
+    [taskList]="ready"
+    (drop)="drop($event)"
   ></app-tasks-container>
+
   <app-tasks-container
     title="to do"
+    [taskList]="todo"
+    (drop)="drop($event)"
   ></app-tasks-container>
+
   <app-tasks-container
     title="in progress"
+    [taskList]="progress"
+    (drop)="drop($event)"
   ></app-tasks-container>
+
   <app-tasks-container
     title="done"
+    [taskList]="done"
+    (drop)="drop($event)"
   ></app-tasks-container>
 </div>
